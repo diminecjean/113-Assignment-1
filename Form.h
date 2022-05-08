@@ -4,8 +4,8 @@
 class Form
 {
 	// scope of variables and function operations still to be decided
-	private
-		Student stud;
+	private:
+		Student stud; // Student object (Composition)
 		bool Vacc_Status, CovidTest;
 		string Vacc_Type, campus;
 		int dateIn, dateOut;
