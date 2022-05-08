@@ -9,12 +9,11 @@ class Student
 {
 	// scope of variables and function operations can be changed
 	private:
-		string name, school, programme;
-		long int ID;
+		string name, school, programme, email;
+		long int ID, phone;
 		int year;
 		bool status;
-		float CGPA;
-
+		
 	public:
 		// default constructor
 		Student();
@@ -28,7 +27,8 @@ class Student
 		void setSchool(string);
 		void setProgramme(string);
 		void setStatus(bool);
-		void setCGPA(float);
+		void setPhone(long int);
+		void setEmail(string);
 		
 		// Accessors
 		string getName();
@@ -37,7 +37,8 @@ class Student
 		string getSchool();
 		string getProgramme();
 		bool getStatus();
-		float getCGPA();
+		long int getPhone();
+		string getEmail();
 		void print();
 		
 		// Destructor
@@ -53,7 +54,8 @@ Student::Student()
 	ID = 0;
 	year = 0;
 	status = false;
-	CGPA = 0.0;
+	phone = 0;
+	email = "";
 }
 
 // Mutators  ------------------------------------------------------------
@@ -87,9 +89,14 @@ void Student::setStatus(bool status)
 	this-> status = status;
 }
 
-void Student::setCGPA(float CGPA)
+void Student::setPhone(long int phone)
 {
-	this-> CGPA = CGPA;
+	this-> phone = phone;
+}
+
+void Student::setEmail(string email)
+{
+	this-> email = email;
 }
 
 // Accessors -----------------------------------------------------------------
@@ -123,9 +130,14 @@ bool Student::getStatus()
 	return status;
 }
 
-float Student::getCGPA()
+long int Student::getPhone()
 {
-	return CGPA;
+	return phone;
+}
+
+string Student::getEmail()
+{
+	return email;
 }
 
 void Student::print()
@@ -136,6 +148,5 @@ void Student::print()
 // Destructor -----------------------------------------------------------
 ~Student::Student(){};
 
-//hello
 
 #endif
