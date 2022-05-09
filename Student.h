@@ -2,13 +2,14 @@
 #define STUDENT_H
 
 
-#include<iomanip>
-#include<string>
+#include <iomanip>
+#include <string>
+
+using namespace std;
 
 class Student
 {
-	// scope of variables and function operations can be changed
-	private:
+ 	private:
 		string name, school, programme, email;
 		long int ID, phone;
 		int year;
@@ -29,6 +30,7 @@ class Student
 		void setStatus(bool);
 		void setPhone(long int);
 		void setEmail(string);
+		
 		
 		// Accessors
 		string getName();
@@ -142,11 +144,18 @@ string Student::getEmail()
 
 void Student::print()
 {
-	// idk bout this yet
+	cout << "Name: " << getName() <<endl;
+	cout << "Student ID: " << getID() <<endl;
+	cout << "Year: " << getYear() <<endl;
+	cout << "School: " << getSchool() <<endl;
+	cout << "Programme: " << getProgramme() <<endl;
+	cout << "Status: " << getStatus() <<endl;
+	cout << "Phone: " << getPhone() <<endl;
+	cout << "Email: " << getEmail() <<endl;
 }
 
 // Destructor -----------------------------------------------------------
-~Student::Student(){};
+Student::~Student(){};
 
 
 #endif
