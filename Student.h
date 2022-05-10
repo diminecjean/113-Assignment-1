@@ -11,7 +11,8 @@ class Student
 {
  	private:
 		string name, NRIC, school, programme, email;
-		long int ID, phone;
+		long int ID;
+		long long int phone;
 		int year;
 		bool status;
 		
@@ -42,7 +43,7 @@ class Student
 		int getYear();
 		string getSchool();
 		string getProgramme();
-		bool getStatus();
+		string getStatus();
 		long long int getPhone();
 		string getEmail();
 		void print();
@@ -158,9 +159,16 @@ string Student::getProgramme()
 	return programme;
 }
 
-bool Student::getStatus()
+string Student::getStatus()
 {
-	return status;
+	if (status == 0)
+	{
+		return "Inactive";
+	}
+	else if (status == 1)
+	{
+		return "Active";
+	}
 }
 
 long long int Student::getPhone()
