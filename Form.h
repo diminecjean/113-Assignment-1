@@ -36,8 +36,8 @@ class Form
 		void setForm (bool, bool, string, string, int, int);
 		
 		// Accessors
-		bool getVacc_Status();
-		bool getCovidTest();
+		string getVacc_Status();
+		string getCovidTest();
 		string getVacc_Type();
 		string getCampus();
 		int getDateIn();
@@ -122,14 +122,28 @@ void Form::setStudentInfo(string name, string NRIC, int ID, int year, string sch
 }
 
 // Accessors -----------------------------------------------------------------
-bool Form::getVacc_Status()
+string Form::getVacc_Status()
 {
-	return  this->Vacc_Status;
+	if (Vacc_Status == 1)
+	{
+		return "Vaccinated";
+	}
+	else if (Vacc_Status == 0)
+	{
+		return "Unvacinated";
+	}
 }
 		
-bool Form::getCovidTest()
+string Form::getCovidTest()
 {
-	return  this->CovidTest;
+	if (CovidTest == 1)
+	{
+		return "Positive";
+	}
+	else if (CovidTest == 0)
+	{
+		return "Negative";
+	}
 }
 		
 string Form::getVacc_Type()
@@ -176,7 +190,7 @@ void Form::print()
 //			system("pause");
 //		}
 //	}
-		if (stud.getStatus()==true)
+		if (stud.getStatus()=="Active"&& getCovidTest() == "Negative" )
 		{
 			stud.print();
 			
@@ -190,7 +204,21 @@ void Form::print()
 			system("pause");
 			system("CLS");
 		}
-		else
+		else if (stud.getStatus()=="Inactive" && getCovidTest() == "Positive")
+		{
+			cout << stud.getName() <<" is not an active student in USM and has tested positive for Covid-19. Stay not permitted." <<endl;
+			
+			system("pause");
+			system("CLS");
+		}
+		else if (getCovidTest() == "Positive")
+		{
+			cout << stud.getName() <<" has tested positive for Covid-19. Stay not permitted." <<endl;
+			
+			system("pause");
+			system("CLS");
+		}
+		else if (stud.getStatus()=="Inactive")
 		{
 			cout << stud.getName() <<" is not an active student in USM. Stay not permitted." <<endl;
 			
