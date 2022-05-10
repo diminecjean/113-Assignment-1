@@ -16,7 +16,7 @@ Some stuffs that can be done here
 1. Created UML Diagram
 2. Created Student.h
 3. Created Form.h
-4. Created mai.cpp
+4. Created main.cpp
 5. Used composition in Form
 6. Read file
 7. Use object array in main
@@ -25,6 +25,7 @@ Some stuffs that can be done here
 1. Inheritance (probably through bill)
 2. Friend function
 3. Operator Overloading
+4. Report
 
 ## Things to remember
 1.You must maintain the data encapsulation of the classes and respecting the concept of 
