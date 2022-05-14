@@ -1,4 +1,0 @@
-1	0	1	Pfizer	Main campus	Looi Wei En	021009070068	Universiti Sains Malaysia	Computer Science	looi.weien02@gmail.com	12	24	1	159163	60135883813
-0	0	1	AstraZeneca	Health campus	Louis Tan	021009070068	Universiti Sains Malaysia	Business	looi.weien02@gmail.com	7	24	1	159163	60135883813
-0	0	0	AstraZeneca	Health campus	Louis Tan	021009070068	Universiti Sains Malaysia	Business	looi.weien02@gmail.com	7	24	1	159163	60135883813
-0	1	0	AstraZeneca	Health campus	Louis Tan	021009070068	Universiti Sains Malaysia	Business	looi.weien02@gmail.com	7	24	1	159163	60135883813
