@@ -13,7 +13,7 @@ class Student
 		string name, NRIC, school, programme, email;
 		long int ID;
 		long long int phone;
-		int year;
+		int year,i;
 		bool status;
 		
 	public:
@@ -46,7 +46,7 @@ class Student
 		string getStatus();
 		long long int getPhone();
 		string getEmail();
-		void print();
+		void print(int);
 		
 		// Destructor
 		~Student();
@@ -181,17 +181,17 @@ string Student::getEmail()
 	return email;
 }
 
-void Student::print()
+void Student::print(int i)
 {
-	cout << "Name: " << getName() <<endl;
-	cout << "NRIC: " << getNRIC() <<endl;
-	cout << "Student ID: " << getID() <<endl;
-	cout << "Year: " << getYear() <<endl;
-	cout << "School: " << getSchool() <<endl;
-	cout << "Programme: " << getProgramme() <<endl;
-	cout << "Status: " << getStatus() <<endl;
-	cout << "Phone: " << getPhone() <<endl;
-	cout << "Email: " << getEmail() <<endl;
+	cout << "---------------------------------------------------------------------------------------------" <<endl;
+	cout << "Student Details " <<i+1 <<endl;
+	cout << "---------------------------------------------------------------------------------------------" <<endl;
+	cout << "Name\t: " <<left <<setw(12)<< getName() << "\t\t\tProgramme\t: " <<left <<setw(12)<< getProgramme()  <<endl;
+	cout << "NRIC\t: " <<left <<setw(12)<< getNRIC() << "\t\t\tStud. Status\t: " <<left <<setw(12)<< getStatus() <<endl;
+	cout << "ID\t: " <<left <<setw(12)<< getID() << "\t\t\tPhone No.\t: " <<left <<setw(12)<< getPhone() <<endl;
+	cout << "Year\t: " <<left <<setw(12)<< getYear() << "\t\t\tEmail Add.\t: " <<left <<setw(12)<< getEmail() <<endl;
+	cout << "School\t: " <<left <<setw(12)<< getSchool() <<endl;
+	cout << "\n\n\n";
 }
 
 // Destructor -----------------------------------------------------------
