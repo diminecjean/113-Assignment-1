@@ -5,6 +5,7 @@
 #include <iostream>
 using namespace std;
 
+// class Bill inherited from class Date
 class Bill : public Date
 {
 	private:
@@ -12,8 +13,7 @@ class Bill : public Date
 		int totalFee;	//Hostel total fee
 
 	public:
-		//
-		//
+		// Default Constructor
 		Bill(){};
 		
 		int setDateIn(int day, int month, int year)
@@ -30,9 +30,7 @@ class Bill : public Date
 		{
 			totalFee = calculateDay()*FeePerDay;
 			return totalFee;
-		}	
-
-			
+		}			
 };
 
 
