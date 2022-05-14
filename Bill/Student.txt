@@ -1,3 +1,0 @@
-1	0	1	Pfizer	Main campus	Looi Wei En	021009070068	Universiti Sains Malaysia	Computer Science	looi.weien02@gmail.com	12	3	2022	1	159163	60135883813
-0	0	1	Pfizer	Main campus	Looi Wei En	021009070068	Universiti Sains Malaysia	Computer Science	looi.weien02@gmail.com	25	5	2022	1	159163	60135883813
-1	0	0	Pfizer	Main campus	Looi Wei En	021009070068	Universiti Sains Malaysia	Computer Science	looi.weien02@gmail.com	12	4	2022	1	159163	60135883813
