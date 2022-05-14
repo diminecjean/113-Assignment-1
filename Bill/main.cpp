@@ -15,8 +15,6 @@ int main()
 	string line;
 	
 	ifstream inputFile;
-//	cout << "Please enter your file name: " <<endl;
-//  getline (cin,filename);
 	inputFile.open("Student.txt");
 	
 	// While loop to count the number of lines of the input file
@@ -40,8 +38,6 @@ int main()
 	long long int phone;
 	
 	Form obj[linecount];
-	
-//	cout << linecount <<endl;
 	
 	for (int i=0; i<linecount; i++)
 	{
@@ -70,17 +66,34 @@ int main()
 		obj[j].print(j);
 		system("CLS");
 	}
-//	obj[0].setForm (true, true, "AZ", "Main Campus", 4,5);
-//	obj[0].setStudentInfo("Looi Wei En", "021009070068", 159163, 1, "Universiti Sains Malaysia", "Computer Science",true,60135883813,"looi.weien02@gmail.com");
-//	obj[0].print();
-//	
-//	obj[1].setForm (true, false, "Pfizer", "Engineering Campus", 13,30);
-//	obj[1].setStudentInfo("Wong Jia Yi", "021009070068", 159163, 2, "Universiti Sains Malaysia", "Computer Science",false,60135883813,"looi.weien02@gmail.com");
-//	obj[1].print();
-//	
-//	obj[2].setForm (false, true, "Sinovac", "Heatlh Campus", 2,15);
-//	obj[2].setStudentInfo("Lee Ying Hooi", "021009070068", 159163, 1, "Universiti Sains Malaysia", "Computer Science",true,60135883813,"looi.weien02@gmail.com");
-//	obj[2].print();
+	
+	int list[linecount];
+	for (int j = 0; j<linecount; j++)
+	{
+		if (obj[j].getStayApprove() == true)
+		{
+			list[j]=1;
+		}
+		else
+		{
+			list[j]=0;
+		}
+	}
+	
+	
+	int count=1;
+	
+	cout << "List of students in campus:" <<endl;
+	for (int i = 0; i<linecount; i++)
+	{
+		if(list[i]==1)
+		{
+			cout << count << ". ";
+			obj[i].List(i);
+			count++;
+		}
+	}
+	
 	
 	return 0;
 }
