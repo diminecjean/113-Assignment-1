@@ -20,12 +20,10 @@ Some stuffs that can be done here
 5. Used composition in Form
 6. Read file
 7. Use object array in main
-
-## To be done
-1. Inheritance (probably through bill)
-2. Friend function
-3. Operator Overloading
-4. Report
+8. Inheritance (probably through bill)
+9. Friend function
+10. Operator Overloading
+11. Report
 
 ## Things to remember
 1.You must maintain the data encapsulation of the classes and respecting the concept of 
